@@ -862,7 +862,8 @@ footer.copyright{
     }
     
     .flex-12{
-        padding:50px;
+        padding-left:5%;
+        padding-right:5%;
         padding-top:10px;
         padding-bottom: 10px;
         width:90%;
@@ -889,7 +890,8 @@ footer.copyright{
     }
     
     .flex-22{
-        padding:50px;
+        padding-left:5%;
+        padding-right:5%;
         padding-top:0;
         padding-bottom: 0;
         width:90%;
@@ -1069,5 +1071,14 @@ justify-content: center;
 
 .d-md-block {
     display: block!important;
+    }
+
+    .flex-12{
+        padding-left:5%;
+        padding-right:5%;
+    }
+    .flex-22{
+        padding-left:5%;
+        padding-right:5%;
     }
 }
