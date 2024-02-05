@@ -656,6 +656,7 @@ footer.copyright{
         transform: rotateY(180deg);
         background-color: #D0D4CA;
         padding:5%;
+        padding-top:10%;
         padding-left:0;
         padding-right:0;
 
@@ -663,6 +664,7 @@ footer.copyright{
     .background-info{
         font-size: 0.65rem ;
     }
+    
     .rreshti3{
         flex-direction: column;
         justify-content:center;
