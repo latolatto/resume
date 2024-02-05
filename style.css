@@ -424,10 +424,6 @@ p{
 }
 
 
-footer.copyright{
-    padding:0;
-}
-
 .copyright{
     font-size:0.7rem;
     text-align: center;
@@ -1050,6 +1046,7 @@ footer.copyright{
 
 .resume{
     margin:10%;
+    margin-top:5%;
     margin-bottom:0;
     padding-bottom:0;
     padding:0;
@@ -1058,7 +1055,7 @@ footer.copyright{
     justify-content: center;
 }
 .copyright{
-    padding-bottom: 10%;
+    padding-bottom: 5%;
 }
 
 .socials{
