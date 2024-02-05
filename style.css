@@ -890,8 +890,8 @@ footer.copyright{
     
     .flex-22{
         padding:50px;
-        padding-top:10px;
-        padding-bottom: 10px;
+        padding-top:0;
+        padding-bottom: 0;
         width:90%;
         height:50%;
     }
@@ -901,7 +901,7 @@ footer.copyright{
     }
 
     .background-info{
-        font-size: 60% ;
+        font-size: 0.75rem ;
     }
     .rreshti3{
         flex-direction: column;
