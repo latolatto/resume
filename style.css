@@ -1066,4 +1066,8 @@ margin-left:10%;
 padding:0;
 justify-content: center;
 }
+
+.d-md-block {
+    display: block!important;
+    }
 }
