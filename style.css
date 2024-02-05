@@ -439,11 +439,14 @@ p{
 }
 
 .contact a svg {
-    color: whitesmoke;  /* Change to your desired color */
+    color: whitesmoke; 
 }
 
+.d-md-block {
+    display: block!important;
+    }
 /*portrait phone screen*/
-@media(min-width: 319px) and (max-width: 480px){
+@media(min-width: 300px) and (max-width: 480px){
     .grid-container{
         display:flex;
         flex-direction: column;
