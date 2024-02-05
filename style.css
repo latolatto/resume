@@ -86,8 +86,8 @@ h2{
     border-radius: 50%;
     display:flex;
     justify-content: center;
-    /* margin-top:10%;
-    margin-bottom: 10%; */
+    /* margin-top:10%; */
+    margin-bottom: 2.15%;
 }
 
 .grid2{
@@ -499,11 +499,13 @@ p{
     .profile-img{
         width:40%;
         height:25vh;
+        /* margin-bottom: 50%; */
+        /* padding-bottom:5%; */
     }
 
     .skills{
         margin:20px;
-        /* margin-top:70%; */
+        /* margin-top:5%; */
         /* padding-top:40px; */
 
     }
