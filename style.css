@@ -52,7 +52,7 @@ body{
     grid-column: span 2;
     margin:0;
     padding:0;
-    padding-top:4%;
+    padding-top:3%;
     /* height:500px; */
     z-index: -9;
 }
@@ -202,7 +202,7 @@ a{
     padding:50px;
     padding-top:0;
     padding-bottom:0;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 }
 p{
     color:black;
@@ -317,7 +317,7 @@ p{
     
   }
 .background-info{
-    font-size: 0.6rem;
+    font-size: 0.72rem;
 }
 .details{
     color:#555843;
@@ -415,7 +415,7 @@ p{
 .resume{
     position: relative;
     margin: 20px;
-    margin-top:40px;
+    margin-top:5%;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -428,14 +428,15 @@ p{
     font-size:0.7rem;
     text-align: center;
     font-weight:200;
-    padding-bottom: 5%;
+    padding-bottom: 1.7%;
     margin-bottom: 0;
+    margin-top: 3%;
 }
 
 
 
 .socials{
-    padding-right: 10%;
+    padding-right: 5.5%;
 }
 
 .contact a svg {
@@ -856,12 +857,12 @@ p{
     }
     
     .flex-11{
-        padding:50px;
+        padding-left:5%;
+        padding-right:5%;
         padding-top:10px;
         padding-bottom: 10px;
         width:90%;
-        height:505;
-
+        height:50%;
     }
     
     .flex-12{
@@ -884,7 +885,8 @@ p{
     }
     
     .flex-21{
-        padding:50px;
+        padding-left:5%;
+        padding-right:5%;
         padding-top:10px;
         padding-bottom: 10px;
         width:90%;
@@ -895,8 +897,8 @@ p{
     .flex-22{
         padding-left:5%;
         padding-right:5%;
-        padding-top:0;
-        padding-bottom: 0;
+        padding-top:10px;
+        padding-bottom: 10px;
         width:90%;
         height:50%;
     }
@@ -1046,22 +1048,21 @@ p{
     display: block!important;
     }
 .carousel-caption{
-    margin-top:10%;
+    margin-top:3%;
 }
 
 .resume{
     margin:10%;
-    /* margin-top:5%; */
+    margin-top:5%;
     margin-bottom:0;
     padding-bottom:0;
     padding:0;
-    padding-left:10%;
+    padding-left:12%;
+    /* padding-right: 5%; */
     display:flex;
     justify-content: center;
 }
-.copyright{
-    /* padding-bottom: 5%; */
-}
+
 
 .socials{
 padding-left: 12%;
@@ -1077,4 +1078,16 @@ justify-content: center;
     display: block!important;
     }
 
+    .a{
+        font-size: 1.2rem;
+    }
+    .projects{
+        font-size: 1rem;
+    }
+
+    .background-info{
+        font-size: 0.74rem;
+    }
+
 }
+
