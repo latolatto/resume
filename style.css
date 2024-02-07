@@ -567,7 +567,8 @@ ul.navbar-nav{
     }
     
     .projects-title{
-        margin-top: 10%;
+        margin-top: 15%;
+        padding-top:15%;
     }
    .caruseli{
     width:90%;
@@ -716,10 +717,12 @@ ul.navbar-nav{
     }
 
     .forma{
+        display: flex;
         width:90%;
         justify-self: center;
         align-items: center;
         justify-content: center;
+        margin-left:5%;
     }
 }
 
@@ -1177,7 +1180,7 @@ padding-left: 12%;
 }
 
 .forma{
-margin-left:10%;
+margin-left:15%;
 padding:0;
 justify-content: center;
 }
