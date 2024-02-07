@@ -159,7 +159,6 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .caruseli{
@@ -169,12 +168,10 @@ h2{
     margin:0;
     margin-left:25%;
     margin-right:25%;
-
 }
 
 .painting{
     width:100%;
-
 }
 
 .projects-title{
@@ -477,23 +474,13 @@ p{
         text-align:center;
     }
 
-    .rreshti1{
-        /* margin-bottom: 20%; */
-    }
-
-    #one{
-        /* margin-bottom: 40%; */
-    }
     .entry{
         height:100vh;
         margin-top: 20%;
         /* margin-bottom:20%; */
         padding-bottom: 0;
     }
-    .intro-title{
-        /* margin-top:10%;
-        margin-bottom:90%; */
-    }
+
     .cat{
         width:70%;
     }
@@ -755,13 +742,6 @@ p{
         height:40%;
     }
 
-    .skills{
-        /* margin:20px; */
-        /* margin-top:70%; */
-        /* padding-top:40px; */
-
-    }
-
     .skills-title{
         margin-bottom: 0;
         padding-bottom: 0;
@@ -806,9 +786,7 @@ p{
         padding-bottom: 10%;
         
     }
-.carousel{
-    /* padding-top: 10%; */
-}
+
     .caruseli{
         width: 80%;
 
@@ -976,6 +954,14 @@ p{
 
 /* large ipad  screen*/
 @media(min-width: 701px) and (max-width: 1200px){
+
+    .grid-container{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        width:100%;
+    }
+
     .navbar{
         position:fixed;
         top:0;
@@ -993,11 +979,24 @@ p{
         width:15%;
     }
 
+    .entry{
+        padding-top:10%;
+    }
+
+    .entry h2{
+        padding-bottom:5%;
+    }
+.profile-img{
+    width:25%;
+    height:40%;
+    padding-bottom: 5%;
+    margin-bottom: 5%;
+}
     .technical{
         flex-wrap:wrap;
         margin-left: 10%;
         margin-right: 10%;
-        margin-bottom: 10%;
+        margin-bottom: 15%;
     }
 
     .caruseli{
@@ -1006,18 +1005,106 @@ p{
     }
 
     .projects-title{
-        padding-top:0;
+        padding-top:15%;
+        margin-top:15%;
     }
 
     .background-title .background-h4{
         margin-top:0 !important;
+        grid-column: span 2;
     }
-    .rreshti2kol1-flexbox1{
+    
+    /* .rreshti2kol1-flexbox1{
         margin-left: 0;
         margin-right:10%;
 }
      .rreshti2kol2-flexbox2{
         margin-right:5%;       
+} */
+
+.rreshti2kol1-flexbox1{
+    display:grid;
+    grid-template-columns: 0.9fr 0.9fr;
+    grid-template-rows: 0.3fr 1fr ;
+    width:80%;
+    gap: 0.1rem;
+    margin:0;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-title{
+    grid-column: span 2;
+    margin-top: 5% !important;
+}
+
+.flip-card-back , .flip-card-front, .flip-card-inner{
+    width:90%;
+    height:100%;
+    align-items: center;
+    background-color:#D0D4CA ;
+    text-align: center;
+    padding-left: 3%;
+}
+
+.flex-12 .flip-card-back{
+    padding-top:5%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.flex-22 .flip-card-back{
+    padding-top:5%;
+    padding-left: 0;
+    padding-right: 0;
+}
+.flex-11{
+    padding-left:5%;
+    padding-right:5%;
+    padding-top:10px;
+    padding-bottom: 10px;
+    width:30%;
+    height:80%;
+}
+.flex-12{
+    padding-left:5%;
+    padding-right:5%;
+    padding-top:10px;
+    padding-bottom: 10px;
+    width:30%;
+    height:80%;
+}
+/* .flip-card{
+    
+} */
+
+.rreshti2kol2-flexbox2{
+    display:grid;
+    grid-template-columns: 0.9fr 0.9fr;
+    grid-template-rows: 0.3fr 1fr ;
+    width:80%;
+    gap: 0.1rem;
+    margin:0;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+.flex-21{
+    padding-left:5%;
+    padding-right:5%;
+    padding-top:10px;
+    padding-bottom: 10px;
+    width:90%;
+    height:80%;
+}
+.flex-22{
+    padding-left:5%;
+    padding-right:5%;
+    padding-top:10px;
+    padding-bottom: 10px;
+    width:30%;
+    height:80%;
 }
 .rreshti4-container{
     display:flex;
@@ -1088,6 +1175,18 @@ justify-content: center;
     .background-info{
         font-size: 0.74rem;
     }
+.caruseli{
+    margin-left: 0;
+    margin-right:0;
+}
 
+.entry{
+    width:80%;
+    /* padding-right: 5%; */
+}
+
+.profile-img{
+    height:2 0%;
+}
 }
 
