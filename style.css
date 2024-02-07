@@ -466,6 +466,7 @@ ul.navbar-nav{
         width:100%;
         margin:0;
     }
+
       
     .navbar{
         position:fixed;
@@ -482,6 +483,10 @@ ul.navbar-nav{
     .nav-item{
         background-color:#939775df;
         width:40%;
+    }
+
+    .container-fluid{
+        background-color: #d0d4ca00;
     }
     h2{
         display:inline-block;
@@ -751,6 +756,11 @@ ul.navbar-nav{
         background-color:#939775df;
         width:40%;
     }
+
+
+    .container-fluid{
+        background-color: #d0d4ca00;
+    }
     h2{
         display:inline-block;
         text-align:right;
@@ -1002,7 +1012,9 @@ ul.navbar-nav{
         background-color:#939775df;
         width:15%;
     }
-
+    .container-fluid{
+        background-color: #d0d4ca00;
+    }
     .entry{
         padding-top:10%;
     }
