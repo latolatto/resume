@@ -459,11 +459,11 @@ ul.navbar-nav{
 }
 
 .contact-ul .contact {
-    color: red ;
+    color: whitesmoke ;
     z-index: 9 ; 
 }
 li.contact {
-    -webkit-transform: translate3d(0, 0, 0);
+    /* -webkit-transform: translate3d(0, 0, 0); */
     z-index: 9;
 }
 
@@ -1063,13 +1063,7 @@ li.contact {
         grid-column: span 2;
     }
     
-    /* .rreshti2kol1-flexbox1{
-        margin-left: 0;
-        margin-right:10%;
-}
-     .rreshti2kol2-flexbox2{
-        margin-right:5%;       
-} */
+
 
 .rreshti2kol1-flexbox1{
     display:grid;
@@ -1123,9 +1117,7 @@ li.contact {
     width:30%;
     height:80%;
 }
-/* .flip-card{
-    
-} */
+
 
 .rreshti2kol2-flexbox2{
     display:grid;
