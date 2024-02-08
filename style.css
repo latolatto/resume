@@ -459,9 +459,14 @@ ul.navbar-nav{
 }
 
 .contact-ul .contact {
-    color: whitesmoke !important;
-    z-index: 9 !important; 
+    color: whitesmoke ;
+    z-index: 9 ; 
 }
+li.contact {
+    -webkit-transform: translate3d(0, 0, 0);
+    z-index: 9;
+}
+
 /*portrait phone screen*/
 @media(min-width: 280px) and (max-width: 480px){
     .grid-container{
@@ -734,10 +739,7 @@ ul.navbar-nav{
         justify-content: center;
         margin-left:5%;
     }
-    .contact-ul .contact {
-        color: whitesmoke !important;
-        z-index: 9 !important; 
-    }
+
 }
 
 
@@ -993,10 +995,7 @@ ul.navbar-nav{
     padding:0;
     justify-content: center;
 }
-.contact-ul .contact {
-    color: whitesmoke !important;
-    z-index: 9 !important; 
-}
+
 }
 
 
@@ -1234,9 +1233,6 @@ justify-content: center;
     width:80%;
     /* padding-right: 5%; */
 }
-.contact-ul .contact {
-    color: whitesmoke !important;
-    z-index: 9 !important; 
-}
+
 }
 
