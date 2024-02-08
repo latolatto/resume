@@ -456,16 +456,16 @@ ul.navbar-nav{
 
 .contact-div{
     justify-self: center;
+    display:flex;
+    flex-direction: column;
+    gap:0.3rem;
 }
 
 .contact-ul .contact {
     color: whitesmoke ;
     z-index: 9 ; 
 }
-li.contact {
-    /* -webkit-transform: translate3d(0, 0, 0); */
-    z-index: 9;
-}
+
 
 /*portrait phone screen*/
 @media(min-width: 280px) and (max-width: 480px){
@@ -1013,7 +1013,7 @@ li.contact {
         position:fixed;
         top:0;
         overflow: hidden;
-        width: 100%;
+        /* width: 100%; */
         font-weight: 500;
         background-color:#93977500;
     }
