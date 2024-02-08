@@ -1027,7 +1027,7 @@ ul.navbar-nav{
         width:15%;
     }
     .container-fluid{
-        background-color: #d0d4ca00;
+        background-color: #d0d4ca00 !important;
     }
     .entry{
         padding-top:10%;
