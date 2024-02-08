@@ -457,6 +457,11 @@ ul.navbar-nav{
 .contact-div{
     justify-self: center;
 }
+
+.contact-ul .contact {
+    color: whitesmoke !important;
+    z-index: 9 !important; 
+}
 /*portrait phone screen*/
 @media(min-width: 280px) and (max-width: 480px){
     .grid-container{
@@ -729,7 +734,12 @@ ul.navbar-nav{
         justify-content: center;
         margin-left:5%;
     }
+    .contact-ul .contact {
+        color: whitesmoke !important;
+        z-index: 9 !important; 
+    }
 }
+
 
 /*horizontal(landscape) phone screen and ipad*/
 @media(min-width: 481px) and (max-width: 700px){
@@ -983,6 +993,10 @@ ul.navbar-nav{
     padding:0;
     justify-content: center;
 }
+.contact-ul .contact {
+    color: whitesmoke !important;
+    z-index: 9 !important; 
+}
 }
 
 
@@ -1220,6 +1234,9 @@ justify-content: center;
     width:80%;
     /* padding-right: 5%; */
 }
-
+.contact-ul .contact {
+    color: whitesmoke !important;
+    z-index: 9 !important; 
+}
 }
 
