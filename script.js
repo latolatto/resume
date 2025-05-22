@@ -22,109 +22,185 @@ window.onload = function () {
     setTimeout(repeatAnimation, 2000); // First call after initial 2-second typing animation
 };
 
-const mountNode = document.getElementById("app");
 
-class TagCloud extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
-  renderTagCloud() {
-    try {
-        const canvas = document.getElementById('myCanvas');
-        const context = canvas.getContext('2d');
-        
-        // Scale the canvas for high-DPI screens (e.g., Retina)
-        const scaleFactor = window.devicePixelRatio || 1;
-        canvas.width = canvas.offsetWidth * scaleFactor;
-        canvas.height = canvas.offsetHeight * scaleFactor;
-        context.scale(scaleFactor, scaleFactor);
-        
-        // Start the TagCanvas with improved settings
-        TagCanvas.Start("myCanvas", "tags", {
-            textColour: "#08fdd8",
-            outlineColour: "#ff00ff",
-            reverse: true,
-            depth: 1.5,
-            maxSpeed: 0.05,
-            wheelZoom: false,
-            weightSize: 1.5,  // Optional weight size adjustment
-            txtHeight: 1000,    // Set the text size directly
-            outlineMethod: 'outline',  // Make the text edges clearer
-            freezeActive: true,  // Stops rotation when hovering over text
-        });
-    } catch (e) {
-        document.getElementById("myCanvasContainer").style.display = "none";
-    }
+
+const tags = [
+  "HTML", "CSS", "JavaScript", "Bootstrap", "jQuery", "Express.js",
+  "EJS", "REST", "NodeJS", "PostgreSQL", "PHP", "MySQL"
+];
+
+const container = document.getElementById("orbitContainer");
+const centerX = container.offsetWidth / 2;
+const centerY = container.offsetHeight / 2;
+const radius = Math.min(container.offsetWidth, container.offsetHeight) * 0.35;
+
+const goldenAngle = Math.PI * (3 - Math.sqrt(5));
+const tagElements = [];
+
+tags.forEach((text, i) => {
+  const tag = document.createElement("div");
+  tag.className = "tag";
+  tag.textContent = text;
+  container.appendChild(tag);
+
+  // Even spherical distribution
+  const y = 1 - (i / (tags.length - 1)) * 2;
+  const radiusAtY = Math.sqrt(1 - y * y);
+  const theta = goldenAngle * i;
+
+  tag.x0 = Math.cos(theta) * radiusAtY;
+  tag.y0 = y;
+  tag.z0 = Math.sin(theta) * radiusAtY;
+
+  tagElements.push(tag);
+});
+
+let angleX = 0;
+let angleY = 0;
+
+function animate() {
+  angleX += 0.003;
+  angleY += 0.002;
+
+  tagElements.forEach(tag => {
+    // Apply 3D rotation
+    const x1 = tag.x0 * Math.cos(angleY) - tag.z0 * Math.sin(angleY);
+    const z1 = tag.x0 * Math.sin(angleY) + tag.z0 * Math.cos(angleY);
+    const y1 = tag.y0 * Math.cos(angleX) - z1 * Math.sin(angleX);
+    const z2 = tag.y0 * Math.sin(angleX) + z1 * Math.cos(angleX);
+
+    const x = x1 * radius;
+    const y = y1 * radius;
+    const scale = 1 + z2 / 2;
+
+    tag.style.transform = `
+      translate3d(${centerX + x - tag.offsetWidth / 2}px, ${centerY + y - tag.offsetHeight / 2}px, ${z2 * radius}px)
+      scale(${scale})
+    `;
+    tag.style.zIndex = Math.floor(scale * 100);
+  });
+
+  requestAnimationFrame(animate);
 }
 
-
-
-  componentDidMount() {
-    this.renderTagCloud();
-  }
-
-  componentWillUnmount() {}
-
-  render() {
-    return /*#__PURE__*/(
-      React.createElement("div", { class: "skills-container" },null, /*#__PURE__*/
-      React.createElement("div", { id: "myCanvasContainer" }, /*#__PURE__*/
-      React.createElement("canvas", {  id: "myCanvas" }, /*#__PURE__*/
-      React.createElement("p", null, "Anything in here will be replaced on browsers that do not support the canvas element"))), /*#__PURE__*/
-      React.createElement("h1", { class: "header" }, "Tech stack"), /*#__PURE__*/
+animate();
 
 
 
 
+  // $(document).ready(function () {
+  //     $('.carousel').owlCarousel({
+  //       margin: 20,
+  //       loop: true,
+  //       autoplay: true,
+  //       autoplayTimeout: 4000,
+  //       autoplayHoverPause: true,
+  //       nav: true,
+  //       navText: ["<span>‹</span>", "<span>›</span>"],
+  //       responsive: {
+  //         0: { items: 1 },
+  //         600: { items: 2 },
+  //         1000: { items: 3 }
+  //       }
+  //     });
 
-      React.createElement("div", { id: "tags" }, /*#__PURE__*/
-      React.createElement("ul", null, /*#__PURE__*/
-      React.createElement("li", null, /*#__PURE__*/
-      React.createElement("a", { href: "/" }, "HTML")), /*#__PURE__*/
+  //     // Desktop: play video on hover
+  //     $('.card').hover(function () {
+  //       const video = $(this).find('.project-video')[0];
+  //       const img = $(this).find('.project-img')[0];
+  //       if (video && img) {
+  //         img.style.display = 'none';
+  //         video.style.display = 'block';
+  //         video.play();
+  //       }
+  //     }, function () {
+  //       const video = $(this).find('.project-video')[0];
+  //       const img = $(this).find('.project-img')[0];
+  //       if (video && img) {
+  //         video.pause();
+  //         video.currentTime = 0;
+  //         video.style.display = 'none';
+  //         img.style.display = 'block';
+  //       }
+  //     });
 
-      React.createElement("li", null, /*#__PURE__*/
-      React.createElement("a", { href: "/" }, "CSS")), /*#__PURE__*/
+  //     // Mobile/Tablet: play video on long press
+  //     $('.card').on('touchstart', function () {
+  //       const card = $(this);
+  //       card.data('timeout', setTimeout(() => {
+  //         const video = card.find('.project-video')[0];
+  //         const img = card.find('.project-img')[0];
+  //         if (video && img) {
+  //           img.style.display = 'none';
+  //           video.style.display = 'block';
+  //           video.play();
+  //         }
+  //       }, 800));
+  //     });
 
-      React.createElement("li", null, /*#__PURE__*/
-      React.createElement("a", { href: "/" }, "Bootstrap")), /*#__PURE__*/
-
-      React.createElement("li", null, /*#__PURE__*/
-      React.createElement("a", { href: "/" }, "Javascript")), /*#__PURE__*/
-
-
-      React.createElement("li", null, /*#__PURE__*/
-      React.createElement("a", { href: "/" }, "JQuery")), /*#__PURE__*/
-
-      React.createElement("li", null, /*#__PURE__*/
-      React.createElement("a", { href: "/" }, "Express.js")), /*#__PURE__*/
-
-      React.createElement("li", null, /*#__PURE__*/
-      React.createElement("a", { href: "/" }, "EJS")), /*#__PURE__*/
-
-      React.createElement("li", null, /*#__PURE__*/
-      React.createElement("a", { href: "/" }, "REST")), /*#__PURE__*/
-
-      React.createElement("li", null, /*#__PURE__*/
-      React.createElement("a", { href: "/" }, "NodeJS")), /*#__PURE__*/
-
-      React.createElement("li", null, /*#__PURE__*/
-      React.createElement("a", { href: "/" }, "PostgreSQL")), /*#__PURE__*/
-
-      React.createElement("li", null, /*#__PURE__*/
-      React.createElement("a", { href: "/" }, "PHP")), /*#__PURE__*/
-
-      React.createElement("li", null, /*#__PURE__*/
-      React.createElement("a", { href: "/" }, "MySQL")), /*#__PURE__*/
-
-
-    ))));
+  //     $('.card').on('touchend touchcancel', function () {
+  //       clearTimeout($(this).data('timeout'));
+  //     });
+  //   });
 
 
+  $(document).ready(function () {
+      $('.carousel').owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
+        nav: true,
+        navText: ["<span>‹</span>", "<span>›</span>"],
+        responsive: {
+          0: { items: 1 },
+          700: { items: 2 },
+          1000: { items: 3 }
+        }
+      });
+
+      // Desktop: play video on hover
+      $('.card').hover(function () {
+        const video = $(this).find('.project-video')[0];
+        const img = $(this).find('.project-img')[0];
+        if (video && img) {
+          img.style.display = 'none';
+          video.style.display = 'block';
+          video.play();
+        }
+      }, function () {
+        const video = $(this).find('.project-video')[0];
+        const img = $(this).find('.project-img')[0];
+        if (video && img) {
+          video.pause();
+          video.currentTime = 0;
+          video.style.display = 'none';
+          img.style.display = 'block';
+        }
+      });
+
+      // Mobile/Tablet: play video on long press
+      $('.card').on('touchstart', function () {
+        const card = $(this);
+        card.data('timeout', setTimeout(() => {
+          const video = card.find('.project-video')[0];
+          const img = card.find('.project-img')[0];
+          if (video && img) {
+            img.style.display = 'none';
+            video.style.display = 'block';
+            video.play();
+          }
+        }, 800));
+      });
+
+      $('.card').on('touchend touchcancel', function () {
+        clearTimeout($(this).data('timeout'));
+      });
+    });
 
 
 
-  }}
 
-
-ReactDOM.render( /*#__PURE__*/React.createElement(TagCloud, null), mountNode);
+        document.getElementById("year").textContent = new Date().getFullYear();
