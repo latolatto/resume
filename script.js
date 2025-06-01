@@ -89,61 +89,6 @@ animate();
 
 
 
-  // $(document).ready(function () {
-  //     $('.carousel').owlCarousel({
-  //       margin: 20,
-  //       loop: true,
-  //       autoplay: true,
-  //       autoplayTimeout: 4000,
-  //       autoplayHoverPause: true,
-  //       nav: true,
-  //       navText: ["<span>‹</span>", "<span>›</span>"],
-  //       responsive: {
-  //         0: { items: 1 },
-  //         600: { items: 2 },
-  //         1000: { items: 3 }
-  //       }
-  //     });
-
-  //     // Desktop: play video on hover
-  //     $('.card').hover(function () {
-  //       const video = $(this).find('.project-video')[0];
-  //       const img = $(this).find('.project-img')[0];
-  //       if (video && img) {
-  //         img.style.display = 'none';
-  //         video.style.display = 'block';
-  //         video.play();
-  //       }
-  //     }, function () {
-  //       const video = $(this).find('.project-video')[0];
-  //       const img = $(this).find('.project-img')[0];
-  //       if (video && img) {
-  //         video.pause();
-  //         video.currentTime = 0;
-  //         video.style.display = 'none';
-  //         img.style.display = 'block';
-  //       }
-  //     });
-
-  //     // Mobile/Tablet: play video on long press
-  //     $('.card').on('touchstart', function () {
-  //       const card = $(this);
-  //       card.data('timeout', setTimeout(() => {
-  //         const video = card.find('.project-video')[0];
-  //         const img = card.find('.project-img')[0];
-  //         if (video && img) {
-  //           img.style.display = 'none';
-  //           video.style.display = 'block';
-  //           video.play();
-  //         }
-  //       }, 800));
-  //     });
-
-  //     $('.card').on('touchend touchcancel', function () {
-  //       clearTimeout($(this).data('timeout'));
-  //     });
-  //   });
-
 
   $(document).ready(function () {
       $('.carousel').owlCarousel({
